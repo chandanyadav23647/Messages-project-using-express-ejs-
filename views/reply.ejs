@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    
+      <div class="container">
+        <h3 class="user">Recived by: @<%=data.user %>. </h3>
+        <p class="content"> <%=data.content%>. </p>
+      </div>
+    
+	  <div class="container">
+		<form method="post" action="/posts/<%=data.id%>/reply">
+			<textarea rows="4" cols="30" name="reply" placeholder="reply.." required></textarea>
+			<br>
+			<br>
+			<button> send </button>
+		</form>
+	  </div>
+</body>
+</html>

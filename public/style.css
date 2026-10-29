@@ -1,0 +1,74 @@
+*{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+}
+body{
+	padding:2rem 1rem;
+	background-color:rgba(0,0,0,0.5);
+}
+h1{
+	color:gold;
+	text-shadow:1px 2px white;
+	margin-bottom:1rem;	
+	/* font-weight:800; */
+	font-size:3rem;
+	font-family:roboto;
+	font-style:itlaic;	
+}
+
+.container{
+	background-color:lightgreen;
+	border-radius:1rem;
+	margin-bottom:2rem;
+	padding:1rem 2rem;
+}
+
+.container:hover{
+	box-shadow:2.5px 5px 10px white;	
+}
+
+.user{
+	font-style:italic;
+}
+
+input,textarea,.content.reply{
+	background-color:rgb(218, 215, 205);
+	border-radius:1rem;
+	border:none;
+	padding:0.5rem 1rem;	
+}
+input:focus,textarea:focus{
+	box-shadow:2.5px 5px 10px grey;		
+	outline:none;
+}
+
+button{
+	background-color:rgb(207, 225, 185);
+	border-radius:1rem;
+	border:none;
+	padding:0.5rem 1.5rem;			
+}
+
+button:hover{
+	transform:scale(1.005);
+	box-shadow:2.5px 5px 10px rgb(236, 243, 158);		
+}
+
+.buttons,.reply.edit{
+	display:flex;
+	gap:1.5rem;
+}
+
+.buttons{
+	margin-top:1rem;	
+}
+.content.reply{
+	background-color:rgb(32, 139, 58);
+}
+
+.reply.edit{
+	background-color:rgb(32, 139, 58);
+	padding:0.5rem 1rem;
+	border-radius:1rem;
+}

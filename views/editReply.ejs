@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+
+	<%for(p of post){%>
+      <div class="container">
+		<h3>Replay for message: <%=p.content%>. </h3> <br>
+		<h4>Your responded earlier:<b> #<%=p.replies%>.</b> </h4> <br>
+        <form method="post" action="/posts/<%=p.id%>/reply/edit">
+            <textarea rows="4" cols="30" name="content" placeholder="Edit message.." required></textarea>
+            <br>
+            <br>
+            <button> submit </button>
+        </form>
+      </div>
+ <%}%>
+
+</body>
+</html>

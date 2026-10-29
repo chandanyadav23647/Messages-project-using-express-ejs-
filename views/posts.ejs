@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Messages</h1>
+	<%for(let post of posts){ %>
+	  <div class="container">
+		<h3 class="user">Posted by: @<%=post.user%>. </h3>
+		<p class="content"> <%=post.content%>. </p>
+		<br>
+		<%if(post.replies){ %>
+				<div class="reply edit"> 
+				<p class="content reply"> <strong>You replied:</strong> <%=post.replies%> </p>
+		   		<form method="post" action="/posts/<%=post.id%>/reply/edit?_method=PATCH">
+					<button>Edit reply </button>
+				</form>
+
+		   		<form method="post" action="/posts/<%=post.id%>/reply/delete?_method=DELETE">
+					<button>delete reply </button>
+				</form>
+				</div>
+				<br>
+			<%} %>		
+		<div class="buttons">
+		<% if(post.replies ===""){%>
+			<form method="get" action="/posts/<%=post.id%>">
+				<button>Reply </button>
+			</form>
+		<%}%>
+
+		<form method="post" action="/posts/<%=post.id%>/delete?_method=DELETE">
+		<button>Delete message </button>
+		</form>
+		</div>
+
+	  </div>
+	<%}%>
+</body>
+</html>
