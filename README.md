@@ -1,0 +1,1 @@
+It is just simple project which only can use for take ideas or design to build your own project and it doesn't interact with two way means in this project we already have message in object form and we have reply,edit reply,delete reply and whole messag.
